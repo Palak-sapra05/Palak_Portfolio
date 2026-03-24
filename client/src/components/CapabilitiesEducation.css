@@ -1,0 +1,111 @@
+@reference "../index.css";
+
+.capabilities-section {
+    perspective: 1000px;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 200px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+.flip-card-front {
+    @apply bg-card-bg backdrop-blur-xl border border-border-main rounded-[2.5rem] shadow-2xl transition-all duration-500;
+}
+
+.flip-card-back {
+    @apply bg-primary text-white shadow-xl shadow-primary/20 flex flex-col items-center justify-start py-12 px-6;
+    transform: rotateY(180deg);
+}
+
+.watermark-text {
+    @apply absolute font-black select-none pointer-events-none italic tracking-tighter uppercase opacity-5 transition-opacity duration-1000;
+    font-size: 15rem;
+    line-height: 1;
+}
+
+.skill-tag-container {
+    @apply flex flex-wrap justify-center gap-2 w-full mt-4;
+}
+
+.skill-category-label {
+    @apply w-full text-[9px] font-black uppercase tracking-[0.3em] text-white/50 mb-2 mt-4 first:mt-0 text-center;
+}
+
+.education-timeline {
+    position: relative;
+}
+
+.education-timeline::before {
+    content: '';
+    position: absolute;
+    left: 1rem;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    @apply bg-primary/30;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 3rem;
+    padding-bottom: 2.5rem;
+}
+
+.timeline-item:last-child {
+    padding-bottom: 0;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: 0.5rem;
+    top: 0.25rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 50%;
+    @apply bg-primary border-4 border-white dark:border-bg-main shadow-md;
+    z-index: 10;
+}
+
+.timeline-content {
+    @apply bg-card-bg border border-border-main p-5 rounded-xl shadow-2xl transition-transform hover:scale-[1.02];
+}
+
+@media (max-width: 768px) {
+    .flip-card {
+        height: 180px;
+    }
+    .watermark-text {
+        font-size: 8rem;
+    }
+}

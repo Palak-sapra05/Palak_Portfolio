@@ -1,0 +1,123 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-primary: var(--primary);
+  --color-primary-glow: var(--primary-glow);
+  --color-secondary: var(--secondary);
+  --color-secondary-glow: var(--secondary-glow);
+  --color-accent: var(--accent);
+  --color-accent-glow: var(--accent-glow);
+  --color-bg-main: var(--bg-main);
+  --color-text-main: var(--text-main);
+  --color-text-muted: var(--text-muted);
+  --color-card-bg: var(--card-bg);
+  --color-border-main: var(--border-main);
+}
+
+/* Root Variables - Custom Pastel Theme */
+:root {
+  --primary: #A5B4FC;
+  --primary-glow: rgba(165, 180, 252, 0.4);
+  --secondary: #F9A8D4;
+  --secondary-glow: rgba(249, 168, 212, 0.3);
+  --accent: #67E8F9;
+  --accent-glow: rgba(103, 232, 249, 0.5);
+
+  --bg-main: #0F172A;
+  --text-main: #E2E8F0;
+  --text-muted: #94A3B8;
+  --card-bg: #1E293B;
+  --card-elevated: #334155;
+  --border-main: rgba(226, 232, 240, 0.1);
+}
+
+/* Dark Mode - Deep Slate Navy Focus */
+.dark {
+  --primary: #A5B4FC;
+  --primary-glow: rgba(165, 180, 252, 0.4);
+  --secondary: #F9A8D4;
+  --secondary-glow: rgba(249, 168, 212, 0.3);
+  --accent: #67E8F9;
+  --accent-glow: rgba(103, 232, 249, 0.5);
+
+  --bg-main: #0F172A;
+  --text-main: #E2E8F0;
+  --text-muted: #94A3B8;
+  --card-bg: #1E293B;
+  --card-elevated: #334155;
+  --border-main: rgba(226, 232, 240, 0.1);
+}
+
+/* Global Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply text-text-main transition-colors duration-300;
+  background-color: var(--bg-main);
+  overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Utilities */
+.section-padding {
+  @apply py-24 md:py-32;
+}
+
+.glass-card {
+  @apply backdrop-blur-xl bg-card-bg border border-border-main shadow-sm;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  background-color: var(--card-elevated);
+  @apply shadow-2xl;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fade-in-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.accent-glow {
+  box-shadow: 0 0 20px 5px var(--primary-glow);
+}
+
+.gradient-text {
+  @apply bg-gradient-to-r from-[#A5B4FC] to-[#F9A8D4] text-transparent bg-clip-text;
+}
+
+.gradient-bg {
+  @apply bg-gradient-to-r from-[#A5B4FC] to-[#F9A8D4];
+}

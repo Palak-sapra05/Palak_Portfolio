@@ -1,0 +1,45 @@
+@reference "../index.css";
+
+.hero-content-grid {
+    @apply grid lg:grid-cols-2 gap-12 items-center text-left;
+}
+
+.hero-image-side {
+    @apply relative flex justify-center lg:justify-start;
+    perspective: 1200px;
+}
+
+.tilted-profile-wrapper {
+    @apply relative w-64 h-64 md:w-80 md:h-80 rounded-[2.5rem] overflow-hidden shadow-2xl transition-all duration-700;
+    transform: rotateX(5deg) rotateY(15deg) rotateZ(-5deg);
+}
+
+.tilted-profile-wrapper:hover {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1.05);
+    @apply shadow-primary/20;
+}
+
+.hero-profile-img {
+    @apply w-full h-full object-cover rounded-[2.5rem];
+}
+
+.profile-glow {
+    @apply absolute -inset-4 bg-gradient-to-br from-[#00f0ff]/30 to-[#ff003c]/30 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10;
+}
+
+.hero-text-side {
+    @apply flex flex-col items-start text-left;
+}
+
+@media (max-width: 1024px) {
+    .hero-content-grid {
+        @apply flex flex-col items-center text-center;
+    }
+    .hero-text-side {
+        @apply items-center text-center;
+    }
+    .tilted-profile-wrapper {
+        @apply mb-12;
+        transform: rotateX(5deg) rotateY(10deg) rotateZ(-3deg);
+    }
+}

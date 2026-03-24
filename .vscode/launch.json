@@ -1,0 +1,38 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Backend",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "cwd": "${workspaceFolder}/server",
+      "console": "integratedTerminal"
+    },
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Launch Frontend (Chrome)",
+      "url": "http://localhost:5173",
+      "webRoot": "${workspaceFolder}/client/src"
+    },
+    {
+      "type": "msedge",
+      "request": "launch",
+      "name": "Launch Frontend (Edge)",
+      "url": "http://localhost:5173",
+      "webRoot": "${workspaceFolder}/client/src"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "▶ Run Fullstack (Chrome)",
+      "configurations": ["Launch Backend", "Launch Frontend (Chrome)"]
+    },
+    {
+      "name": "▶ Run Fullstack (Edge)",
+      "configurations": ["Launch Backend", "Launch Frontend (Edge)"]
+    }
+  ]
+}

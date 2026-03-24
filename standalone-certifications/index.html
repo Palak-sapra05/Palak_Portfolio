@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certifications & Achievements | Portfolio</title>
+    <!-- Google Fonts: Inter & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Left Floating Panel: Coding Profiles -->
+    <aside class="side-panel left-panel">
+        <div class="panel-content">
+            <a href="https://leetcode.com" target="_blank" class="social-btn" data-tooltip="LeetCode Profile">
+                <i data-lucide="code-2"></i>
+            </a>
+            <a href="https://hackerrank.com" target="_blank" class="social-btn" data-tooltip="HackerRank Profile">
+                <i data-lucide="terminal"></i>
+            </a>
+            <a href="https://hackerearth.com" target="_blank" class="social-btn" data-tooltip="HackerEarth Profile">
+                <i data-lucide="cpu"></i>
+            </a>
+            <a href="https://github.com" target="_blank" class="social-btn" data-tooltip="GitHub Profile">
+                <i data-lucide="github"></i>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Right Floating Panel: Navigation -->
+    <aside class="side-panel right-panel">
+        <div class="panel-content">
+            <a href="#home" class="nav-btn active" data-tooltip="Home">
+                <i data-lucide="home"></i>
+            </a>
+            <a href="#about" class="nav-btn" data-tooltip="About">
+                <i data-lucide="user"></i>
+            </a>
+            <a href="#projects" class="nav-btn" data-tooltip="Projects">
+                <i data-lucide="layers"></i>
+            </a>
+            <a href="#certifications" class="nav-btn" data-tooltip="Certifications">
+                <i data-lucide="award"></i>
+            </a>
+            <a href="#contact" class="nav-btn" data-tooltip="Contact">
+                <i data-lucide="mail"></i>
+            </a>
+        </div>
+    </aside>
+
+    <main>
+        <!-- Home Section (Placeholder) -->
+        <section id="home" class="hero-section h-screen">
+            <div class="container">
+                <h1 class="fade-up">Portfolio <span class="accent">Home</span></h1>
+                <p class="fade-up delay-1">Explore my journey and achievements.</p>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="section-padding">
+            <div class="container">
+                <header class="section-header">
+                    <h2 class="section-title fade-up">Certifications & <span class="accent">Achievements</span></h2>
+                    <div class="underline"></div>
+                </header>
+
+                <div class="cert-grid">
+                    <!-- Card 1 -->
+                    <div class="cert-card fade-up">
+                        <div class="card-icon">
+                            <i data-lucide="star" class="icon-star"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>HackerRank 5★ in C++, Java, Python</h3>
+                            <p class="platform">HackerRank</p>
+                            <p class="description">Demonstrated expert proficiency in multiple programming languages through continuous problem-solving and algorithmic challenges.</p>
+                            <a href="#" target="_blank" class="btn-cert">View Certificate <i data-lucide="external-link"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="cert-card fade-up delay-1">
+                        <div class="card-icon">
+                            <i data-lucide="trophy" class="icon-trophy"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>LeetCode 500+ Problems Solved</h3>
+                            <p class="platform">LeetCode</p>
+                            <p class="description">Mastered Data Structures and Algorithms by solving a wide range of problems, optimizing for time and space complexity.</p>
+                            <a href="#" target="_blank" class="btn-cert">View Profile <i data-lucide="external-link"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="cert-card fade-up delay-2">
+                        <div class="card-icon">
+                            <i data-lucide="binary" class="icon-binary"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>HackerEarth Competitive Programming</h3>
+                            <p class="platform">HackerEarth</p>
+                            <p class="description">Achievement in national level coding challenges and competitive programming contests, showcasing real-time logic building.</p>
+                            <a href="#" target="_blank" class="btn-cert">View Achievement <i data-lucide="external-link"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="cert-card fade-up delay-3">
+                        <div class="card-icon">
+                            <i data-lucide="globe" class="icon-globe"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Full Stack Web Development</h3>
+                            <p class="platform">Coursera / Udemy</p>
+                            <p class="description">Comprehensive certification covering MERN stack, RESTful APIs, and modern frontend development best practices.</p>
+                            <a href="#" target="_blank" class="btn-cert">View Certificate <i data-lucide="external-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Other Sections for Nav Demo -->
+        <section id="about" class="placeholder-section"><h2>About Section</h2></section>
+        <section id="projects" class="placeholder-section"><h2>Projects Section</h2></section>
+        <section id="contact" class="placeholder-section"><h2>Contact Section</h2></section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

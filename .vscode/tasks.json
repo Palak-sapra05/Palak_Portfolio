@@ -1,0 +1,37 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Start Server",
+      "type": "npm",
+      "script": "dev",
+      "path": "server/",
+      "isBackground": true,
+      "problemMatcher": [],
+      "presentation": {
+        "panel": "new"
+      }
+    },
+    {
+      "label": "Start Client",
+      "type": "npm",
+      "script": "dev",
+      "path": "client/",
+      "isBackground": true,
+      "problemMatcher": [],
+      "presentation": {
+        "panel": "new"
+      }
+    },
+    {
+      "label": "▶ Run Fullstack",
+      "dependsOn": ["Start Server", "Start Client"],
+      "dependsOrder": "parallel",
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}

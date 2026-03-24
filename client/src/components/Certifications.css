@@ -1,0 +1,39 @@
+@reference "../index.css";
+
+.cert-card-v2 {
+    @apply p-10 bg-card-bg backdrop-blur-xl border border-border-main rounded-[2.5rem] shadow-2xl transition-all duration-500;
+}
+
+.cert-card-v2:hover {
+    @apply transform -translate-y-2 border-primary/30 shadow-2xl;
+}
+
+.card-icon-v2 {
+    @apply w-16 h-16 rounded-2xl bg-gray-50 dark:bg-white/5 flex items-center justify-center p-4 shadow-inner group-hover:bg-primary/10 transition-colors;
+}
+
+.card-icon-v2 svg {
+    @apply w-full h-full;
+}
+
+.cert-platform-v2 {
+    @apply text-primary font-black uppercase tracking-[0.2em] text-[10px] mb-2;
+}
+
+.cert-btn-v2 {
+    @apply inline-flex items-center gap-3 px-6 py-3 rounded-xl bg-gray-50 dark:bg-white/5 text-xs font-black uppercase tracking-widest border border-gray-100 dark:border-border-main hover:bg-primary hover:text-white hover:border-primary transition-all;
+}
+
+.view-cert-btn {
+    @apply inline-flex items-center gap-3 px-8 py-3 rounded-full border-2 border-primary text-primary text-sm font-black uppercase tracking-widest transition-all duration-300;
+}
+
+.view-cert-btn:hover {
+    @apply bg-primary text-white shadow-lg shadow-primary/30;
+}
+
+@media (max-width: 768px) {
+    .cert-card-v2 {
+        @apply p-8;
+    }
+}
